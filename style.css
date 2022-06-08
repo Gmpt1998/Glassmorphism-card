@@ -1,22 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
-
 body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh ;
+    min-height: 100vh;
     background: linear-gradient(to top, #be93c5, #7bc6cc);
     background-attachment: fixed;
 }
-
-.contenedor{
+.container{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -25,8 +23,7 @@ body{
     padding: 20px 0;
     width: 1000px;
 }
-
-.contenedor .tarjeta{
+.card{
     display: flex;
     position: relative;
     height: 250px;
@@ -36,8 +33,7 @@ body{
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     background: white;
 }
-
-.contenedor .tarjeta .imagen {
+.image{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,28 +47,24 @@ body{
     width: calc(100% - 20px);
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+    box-shadow:  5px 5px 30px rgba(0,0,0,0.1);
     z-index: 1;
     transition: 0.5s ease-in-out;
 }
-
-.contenedor .tarjeta:hover .imagen{
+.card:hover .image{
     height: 150px;
     width: 150px;
     left: -75px;
     top: calc(50% - 75px);
 }
-
-.contenedor .tarjeta .imagen img{
+img{
     max-width: 250px;
     transition: 0.5s ease-in-out;
 }
-
-.contenedor .tarjeta:hover .imagen img{
+.card:hover img{
     max-width: 150px;
 }
-
-.contenedor .tarjeta .texto{
+.text{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,14 +74,12 @@ body{
     height: 100%;
     padding: 20px;
 }
-
-.contenedor .tarjeta .texto h3{
+.text h3{
     color: #be93c5;
     margin-bottom: 5px;
     font-size: 24px;
 }
-
-.contenedor .tarjeta .texto a{
+.text a{
     display: inline-block;
     margin-top: 10px;
     padding: 8px 20px;
@@ -99,47 +89,47 @@ body{
     color: white;
     font-weight: 500;
 }
-.contenedor .tarjeta .texto a:hover{
+.text a:hover{
     background: #be93c5;
 }
 
-@media (max-width: 992px){
-    .contenedor{
+@media (max-width:992px){
+    .container{
         position: relative;
         width: 100%;
         flex-direction: column;
         align-items: center;
     }
-    .contenedor .tarjeta{
+    .card{
         width: 300px;
         height: auto;
         flex-direction: column;
-        background: transparent;
-        margin: -20px 0;
+        background:transparent;
+        margin: -20px 0 ;
         box-shadow: none;
     }
-    .contenedor .tarjeta:hover .imagen{
+    .card:hover .image{
         width: 80%;
         height: 200px;
         top: 100px;
         left: 10%;
     }
-    .contenedor .tarjeta .imagen{
+    .image{
         position: relative;
     }
-    .contenedor .tarjeta .imagen,.contenedor .tarjeta:hover .imagen{
+    .image,.card:hover .image{
         width: 80%;
         height: 200px;
         top: 100px;
         left: 10%;
     }
-    .contenedor .tarjeta:hover .imagen{
+    .card:hover .image{
         top: 80px;
     }
-    .contenedor .tarjeta .imagen img, .contenedor .tarjeta:hover .imagen img{
+    img, .card:hover img{
         max-width: 150px;
     }
-    .contenedor .tarjeta .texto{
+    .text{
         position: relative;
         width: 100%;
         padding: 20px 40px 40px;
